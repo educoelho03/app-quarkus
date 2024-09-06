@@ -29,7 +29,7 @@ public class UserService {
     }
 
     public UserEntity findById(UUID userId){
-        return (UserEntity) userRepository.findByIdOptional(userId)
+        return userRepository.findByIdOptional(userId)
                 .orElseThrow(() -> new UserNotFoundException("Usuario nao encontrado"));
     }
 
